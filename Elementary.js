@@ -64,3 +64,15 @@ const findMessage = (str) => {
     }
     return result;
 };
+
+//Second Index
+//Даны 2 строки. Необходимо найти индекс второго вхождения второй строки в первую.
+const secondIndex = (str, symbol) => {
+    const firstIndex = str.indexOf(symbol);
+    for (let i = firstIndex + 1; i < str.length; i++) {
+        if (str[i] === symbol) {
+            return i;
+        }
+    }
+};
+console.log(secondIndex("sims", "s"));
