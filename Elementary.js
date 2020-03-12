@@ -50,3 +50,17 @@ const digitsMultip = (int) => {
     }
     return result;
 };
+
+//Secret Message
+// Дан кусок текста. Соберите все заглавные буквы в одно слово в том порядке как они встречаются в куске текста.
+// Например: текст = "How are you? Eh, ok. Low or Lower? Ohhh.", если мы соберем все заглавные буквы, то получим сообщение "HELLO".
+const findMessage = (str) => {
+    str = str.replace(/[\s/\W/\d]/g, '');
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase()) {
+            result += str[i];
+        }
+    }
+    return result;
+};
