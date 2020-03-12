@@ -37,3 +37,16 @@ const fizzBuzz = (int) => {
     }
     return String(int);
 };
+
+//Digits Multiplication
+//Дано положительное целое число. Вам необходимо подсчитать произведение всех цифр в этом числе, за исключением нулей.
+const digitsMultip = (int) => {
+    const intToStr = String(int);
+    let result = 1;
+    for (let i = 0; i < intToStr.length; i++) {
+        if (intToStr[i] != 0) {
+            result *= Number(intToStr[i]);
+        }
+    }
+    return result;
+};
