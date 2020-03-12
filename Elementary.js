@@ -69,10 +69,23 @@ const findMessage = (str) => {
 //Даны 2 строки. Необходимо найти индекс второго вхождения второй строки в первую.
 const secondIndex = (str, symbol) => {
     const firstIndex = str.indexOf(symbol);
+    if (symbol === '') {
+        return undefined;
+    }
     for (let i = firstIndex + 1; i < str.length; i++) {
         if (str[i] === symbol) {
             return i;
         }
     }
 };
-console.log(secondIndex("sims", "s"));
+
+//Correct Sentence
+// На вход Вашей функции будет передано одно предложение. Необходимо вернуть его исправленную копию так,
+// чтобы оно всегда начиналось с большой буквы и заканчивалось точкой.
+const correctSentence = (str) => {
+    const firstIndex = str[0];
+    if (str.slice(-1) !== '.') {
+        return firstIndex.toUpperCase() + str.slice(1) + '.';
+    }
+    return str;
+};
