@@ -89,3 +89,16 @@ const correctSentence = (str) => {
     }
     return str;
 };
+
+//Even the Last
+// Дан массив целых чисел. Нужно найти сумму элементов с четными индексами (0-й, 2-й, 4-й итд),
+// затем перемножить эту сумму и последний элемент исходного массива. Не забудьте, что первый элемент массива имеет индекс 0.
+const evenLast = (arr) => {
+let result = 0;
+    for (let i = 0; i < arr.length; i += 2) {
+        result += arr[i];
+    }
+    result *= arr.slice(-1);
+    return result;
+};
+console.log(evenLast([0, 1, 2, 3, 4, 5]));
