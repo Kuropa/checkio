@@ -101,4 +101,19 @@ let result = 0;
     result *= arr.slice(-1);
     return result;
 };
-console.log(evenLast([0, 1, 2, 3, 4, 5]));
+
+//Common Words
+//Функция должна находить все слова, которые появляются в обеих строках.
+const commonWords = (str1, str2) => {
+    const arr1 = str1.split(',');
+    const arr2 = str2.split(',');
+    let result = [];
+    arr1.forEach(e => {
+        arr2.forEach(j => {
+            if (e === j) {
+                result.push(e);
+            }
+        })
+    });
+    return String(result.sort());
+};
