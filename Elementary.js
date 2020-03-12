@@ -117,3 +117,12 @@ const commonWords = (str1, str2) => {
     });
     return String(result.sort());
 };
+
+//The Most Numbers
+//Вам нужно найти разницу между самым большим (максимум) и самым малым (минимум) элементом.
+const mostNumbers = (...num) => {
+    const maxNumber = Math.max.apply(Math, num);
+    const minNumber = Math.min.apply(Math, num);
+    const result = maxNumber - minNumber;
+    return result > 0 ? result : 0;
+};
