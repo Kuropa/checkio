@@ -140,3 +140,24 @@ const countInversion = (arr) => {
     }
     return result.length;
 };
+
+//The Most Frequent
+//Определить наиболее встречающуюся строку в последоваельности.
+const mostFrequent = (arr) => {
+    const obj = {};
+    for (let i = 0; i < arr.length; i++) {
+       let key = arr[i];
+       if (key in obj) {
+            obj[key] += 1;
+        } else {
+            obj[key] = 1;
+        }
+    }
+    const max = Math.max.apply(null, Object.values(obj));
+    return String(Object.keys(obj).filter(k => obj[k] === max));
+};
+console.log(mostFrequent([
+    'a', 'b', 'c', 
+    'a', 'b',
+    'a'
+]));
