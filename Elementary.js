@@ -126,3 +126,17 @@ const mostNumbers = (...num) => {
     const result = maxNumber - minNumber;
     return result > 0 ? result : 0;
 };
+
+//Count Inversion
+//Вам дана последовательность уникальных чисел и вы должны подсчитать число инверсий в этой последовательности.
+const countInversion = (arr) => {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                result.push(arr[i]);
+            }
+        }
+    }
+    return result.length;
+};
