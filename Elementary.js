@@ -156,8 +156,22 @@ const mostFrequent = (arr) => {
     const max = Math.max.apply(null, Object.values(obj));
     return String(Object.keys(obj).filter(k => obj[k] === max));
 };
-console.log(mostFrequent([
-    'a', 'b', 'c', 
-    'a', 'b',
-    'a'
-]));
+
+//Three Words
+//Вам нужно проверить есть ли в исходной строке три слова подряд.
+const threeWords = (str) => {
+    const arrOfStr = str.split(' ');
+    const regExp = /[a-zA-Z]/;
+    let count = 0;
+    arrOfStr.forEach(e => {
+        if (count === 3) {
+            return count;
+        }
+        if (regExp.test(e)) {
+            count++;
+        } else {
+            count = 0;
+        }
+    })
+    return count === 3 ? true : false;
+};
