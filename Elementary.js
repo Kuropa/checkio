@@ -184,3 +184,9 @@ const biggerPrice = (num, obj) => {
     });
     return top.slice(0, num);
 };
+
+//First Word
+//Дана строка и нужно найти ее первое слово.
+const firstWord = (str) => {
+    return str.split(' ')[0];
+};
