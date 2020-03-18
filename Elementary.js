@@ -175,3 +175,12 @@ const threeWords = (str) => {
     })
     return count === 3 ? true : false;
 };
+
+//Bigger Price
+//Найти ТОП самых дорогих товаров. У каждого объекта 2 атрибута "name" и "price".
+const biggerPrice = (num, obj) => {
+    const top = obj.sort(function(a, b) {
+        return b.price - a.price;
+    });
+    return top.slice(0, num);
+};
