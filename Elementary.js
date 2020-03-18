@@ -186,7 +186,7 @@ const biggerPrice = (num, obj) => {
 };
 
 //First Word
-//Дана строка и нужно найти ее первое слово.
+//Дана строка и нужно найти ее первое слово. (Замена функкции для более сложного задания)
 const firstWord = (str) => {
-    return str.split(' ')[0];
+    return str.match(/[\w']+/)[0]
 };
