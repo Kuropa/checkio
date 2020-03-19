@@ -188,5 +188,19 @@ const biggerPrice = (num, obj) => {
 //First Word
 //Дана строка и нужно найти ее первое слово. (Замена функкции для более сложного задания)
 const firstWord = (str) => {
-    return str.match(/[\w']+/)[0]
+    return str.match(/[\w']+/)[0];
+};
+
+//Between Markers
+//Вам необходимо найти текст, заключенный между двумя маркерами.
+const betweenMarkers = (str, marker1, marker2) => {
+    let startIndex = 0;
+    let endIndex;
+    if (str.indexOf(marker1) > -1) {
+        startIndex = str.indexOf(marker1) + marker1.length;
+    }
+    if (str.indexOf(marker2) > -1) {
+        endIndex = str.indexOf(marker2);
+    }
+    return str.slice(startIndex, endIndex);
 };
